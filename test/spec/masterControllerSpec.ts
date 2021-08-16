@@ -40,7 +40,7 @@ describe('Master test suite', () => {
             it('should set familiarName to Dillon', () => {
                 // If testing objs, toBe tests the memory ref to ensure the obj is the same by ref.
                 // Whereas, toEqual tests for equivalent value.
-                expect(sut.familiarName).toEqual('Max', "familiarName does not equal 'Dillon'.");
+                expect(sut.familiarName).toEqual('Dillon', "familiarName does not equal 'Dillon'.");
             });
 
             it('should set speciesName to Homo Sapiens', () => {

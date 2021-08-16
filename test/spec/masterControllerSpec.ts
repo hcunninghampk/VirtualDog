@@ -4,7 +4,7 @@ import virtdog = dogsrus.virtdog;
 describe('Master test suite', () => {
     describe('MasterController tests', () => {
         // sut stands for Subject/Sys Under Test
-        let sut: vdog.MasterController;
+        let sut: virtdog.MasterController;
 
         //constructor param dependencies
         let $rootScope: ng.IRootScopeService;//ng stands for angular namespace
@@ -14,7 +14,7 @@ describe('Master test suite', () => {
         //slots, like in Vue Test Utils?
         let masterControllerParams: {
             $rootScope: ng.IRootScopeService,
-            eventNames: vdog.EventNames,
+            eventNames: virtdog.EventNames,
         };
 
         // can take an optional timeout param
@@ -29,11 +29,11 @@ describe('Master test suite', () => {
                 $rootScope = $injector.get<ng.IRootScopeService>('$rootScope');
                 masterControllerParams = {
                     $rootScope: $rootScope,
-                    eventNames: vdog.eventNames
+                    eventNames: virtdog.eventNames
                 };
             });
 
-            sut = $controller<vdog.MasterController>('masterController', masterControllerParams);
+            sut = $controller<virtdog.MasterController>('masterController', masterControllerParams);
         });// end beforeEach
 
         describe('masterController constructor tests', () => {
@@ -106,11 +106,11 @@ describe('Master test suite', () => {
     });
 
     describe('MasterAction tests', () => {
-        let sut: vdog.MasterAction, actionFunc = (o: vdog.DogObject) => {
+        let sut: virtdog.MasterAction, actionFunc = (o: virtdog.DogObject) => {
         };// actionFunc is empty fcn so it's a stub
 
         beforeEach(() => {
-            sut = new vdog.MasterAction('masterActionName', actionFunc)
+            sut = new virtdog.MasterAction('masterActionName', actionFunc)
         });
 
         describe('MasterAction constructor tests', () => {
